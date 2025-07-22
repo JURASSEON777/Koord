@@ -13,7 +13,7 @@ from telegram.ext import (
 
 
 #Содержит токен бота для подключения
-bot = Bot(token="7875443059:AAH1o7EJPDOypj3yIalCBcpOjfizx30NIRU")
+bot = Bot(token="BOTTOKEN")
 
 
 def reply_to_text(update: Update, context: CallbackContext):
@@ -271,7 +271,7 @@ def reply_to_text(update: Update, context: CallbackContext):
 
 
 def main():
-    updater = Updater("7875443059:AAH1o7EJPDOypj3yIalCBcpOjfizx30NIRU")
+    updater = Updater("BOTTOKEN")
     dp = updater.dispatcher  # Получаем Dispatcher из Updater
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, reply_to_text))  # Fixed `Filters`
 
